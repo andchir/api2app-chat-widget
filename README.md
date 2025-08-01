@@ -1,7 +1,10 @@
 # api2app-chat-widget
 Widget for embedding iframe applications on a website.
 
+Demo:  
+[https://andchir.github.io/api2app-chat-widget/](https://andchir.github.io/api2app-chat-widget/)
 
+Embed code:  
 ```html
 <script src="https://andchir.github.io/api2app-chat-widget/api2app-chat-widget.js"></script>
 <script>
@@ -16,6 +19,3 @@ Widget for embedding iframe applications on a website.
 </script>
 ```
 ![Screenshot](https://github.com/andchir/api2app-chat-widget/blob/main/screenshot.jpg?raw=true)
-
-Demo:  
-[https://andchir.github.io/api2app-chat-widget/](https://andchir.github.io/api2app-chat-widget/)
