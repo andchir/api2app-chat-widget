@@ -153,7 +153,7 @@ class Api2AppChatWidget {
             this.iframeBox.style.maxHeight = 'calc(100vh - 70px)';
             this.button.style.marginRight = '10px';
             this.button.style.marginLeft = '10px';
-            this.iframeBox.style.borderTop = '1px solid rgba(0,0,0,0.3)';
+            this.iframeBox.style.borderTop = '1px solid rgba(0,0,0,0.2)';
             this.iframeBox.style.borderBotttom = '1px solid rgba(0,0,0,0.3)';
         } else {
             this.iframeBox.style.maxWidth = 'calc(100vw - 40px)';
