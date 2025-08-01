@@ -213,5 +213,5 @@ class Api2AppChatWidget {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = ChatWidget;
+    module.exports = Api2AppChatWidget;
 }
