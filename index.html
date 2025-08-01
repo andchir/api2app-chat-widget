@@ -6,9 +6,23 @@
     <title>api2app - Chat Widget Demo</title>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<h1>api2app-chat-widget</h1>
 
-<script src="api2app-chat-widget.js"></script>
+<pre>
+&lt;script src="https://andchir.github.io/api2app-chat-widget/api2app-chat-widget.js">&lt;/script&gt;
+&lt;script&gt;
+    const chatWidget = new Api2AppChatWidget(
+        'https://api2app.org/ru/apps/embed/your-app-embed-id', {
+            buttonColor: '#007bff',
+            hoverColor: '#0056b3',
+            position: 'bottom-right',
+            width: 350,
+            height: 465
+        });
+&lt;/script&gt;
+</pre>
+
+<script src="https://andchir.github.io/api2app-chat-widget/api2app-chat-widget.js"></script>
 <script>
     const chatWidget = new Api2AppChatWidget(
         'https://api2app.org/ru/apps/embed/your-app-embed-id', {
