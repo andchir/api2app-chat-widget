@@ -6,12 +6,12 @@ Widget for embedding iframe applications on a website.
 <script src="api2app-chat-widget.js"></script>
 <script>
     const chatWidget = new Api2AppChatWidget(
-            'https://api2app.org/ru/apps/embed/your-app-embed-id', {
-                buttonColor: '#007bff',
-                hoverColor: '#0056b3',
-                position: 'bottom-right',
-                width: 350,
-                height: 465
-            });
+        'https://api2app.org/ru/apps/embed/your-app-embed-id', {
+            buttonColor: '#007bff',
+            hoverColor: '#0056b3',
+            position: 'bottom-right',
+            width: 350,
+            height: 465
+        });
 </script>
 ```
