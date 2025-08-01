@@ -149,10 +149,12 @@ class Api2AppChatWidget {
             this.iframeBox.style.maxWidth = '100vw';
             this.iframeBox.style.width = '100vw';
             this.iframeBox.style.borderRadius = '0';
-            this.iframeBox.style.height = 'calc(100vh - 70px)';
+            this.iframeBox.style.height = this.options.height + 'px';
             this.iframeBox.style.maxHeight = 'calc(100vh - 70px)';
             this.button.style.marginRight = '10px';
             this.button.style.marginLeft = '10px';
+            this.iframeBox.style.borderTop = '1px solid rgba(0,0,0,0.3)';
+            this.iframeBox.style.borderBotttom = '1px solid rgba(0,0,0,0.3)';
         } else {
             this.iframeBox.style.maxWidth = 'calc(100vw - 40px)';
             this.iframeBox.style.width = this.options.width + 'px';
@@ -161,6 +163,8 @@ class Api2AppChatWidget {
             this.iframeBox.style.borderRadius = '10px';
             this.button.style.marginRight = '0';
             this.button.style.marginLeft = '0';
+            this.iframeBox.style.borderTop = '0';
+            this.iframeBox.style.borderBotttom = '0';
         }
         this.updateContainerPosition(e.matches);
     }
