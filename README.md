@@ -16,3 +16,6 @@ Widget for embedding iframe applications on a website.
 </script>
 ```
 ![Screenshot](https://github.com/andchir/api2app-chat-widget/blob/main/screenshot.jpg?raw=true)
+
+Demo:  
+[https://andchir.github.io/api2app-chat-widget/](https://andchir.github.io/api2app-chat-widget/)
