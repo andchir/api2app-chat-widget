@@ -201,6 +201,7 @@ class Api2AppChatWidget {
 
     close() {
         this.container.style.height = 'auto';
+        this.container.style.minHeight = 'auto';
         this.container.style.width = 'auto';
         this.iframeBox.style.display = 'none';
         this.button.innerHTML = this.getChatIcon();
