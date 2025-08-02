@@ -38,6 +38,12 @@ class Api2AppChatWidget {
         this.container.style.display = 'flex';
         this.container.style.flexDirection = 'column';
 
+        this.container.style.height = 'auto';
+        this.container.style.minHeight = '0';
+        this.container.style.width = 'auto';
+        this.container.style.maxHeight = 'calc(100% - 30px)';
+        this.container.style.maxWidth = '100%';
+
         this.updateContainerPosition();
     }
 
@@ -70,13 +76,14 @@ class Api2AppChatWidget {
     createIframeBox() {
         this.iframeBox = document.createElement('div');
         this.iframeBox.style.display = 'none';
+        this.iframeBox.style.flexGrow = '1';
+        this.iframeBox.style.width = '100%';
+        this.iframeBox.style.height = '100%';
         this.iframeBox.style.marginBottom = '10px';
         this.iframeBox.style.borderRadius = '10px';
         this.iframeBox.style.overflow = 'hidden';
         this.iframeBox.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
         this.iframeBox.style.backgroundColor = '#fff';
-        this.iframeBox.style.maxWidth = 'calc(100vw - 40px)';
-        this.iframeBox.style.maxHeight = '70vh';
 
         this.iframe = document.createElement('iframe');
         this.iframe.src = this.iframeSrc;
@@ -145,27 +152,23 @@ class Api2AppChatWidget {
 
     handleMediaChange(e) {
         if (e.matches) {
-            this.iframeBox.style.maxWidth = '100vw';
-            this.iframeBox.style.width = '100vw';
-            this.iframeBox.style.borderRadius = '0';
-            this.iframeBox.style.height = this.options.height + 'px';
-            this.iframeBox.style.maxHeight = 'calc(100vh - 80px)';
+            this.container.style.maxHeight = 'calc(100% - 20px)';
+            this.container.style.width = '100%';
+            this.container.style.paddingBottom = '10px';
             this.button.style.marginRight = '10px';
             this.button.style.marginLeft = '10px';
+            this.iframeBox.style.borderRadius = '0';
             this.iframeBox.style.borderTop = '1px solid rgba(0,0,0,0.2)';
             this.iframeBox.style.borderBotttom = '1px solid rgba(0,0,0,0.3)';
-            this.container.style.paddingBottom = '10px';
         } else {
-            this.iframeBox.style.maxWidth = 'calc(100vw - 40px)';
-            this.iframeBox.style.width = this.options.width + 'px';
-            this.iframeBox.style.height = this.options.height + 'px';
-            this.iframeBox.style.maxHeight = '70vh';
-            this.iframeBox.style.borderRadius = '10px';
+            this.container.style.maxHeight = 'calc(100% - 30px)';
+            this.container.style.width = this.options.width + 'px';
+            this.container.style.paddingBottom = '0';
             this.button.style.marginRight = '0';
             this.button.style.marginLeft = '0';
+            this.iframeBox.style.borderRadius = '10px';
             this.iframeBox.style.borderTop = '0';
             this.iframeBox.style.borderBotttom = '0';
-            this.container.style.paddingBottom = '0';
         }
         this.updateContainerPosition(e.matches);
     }
@@ -187,6 +190,9 @@ class Api2AppChatWidget {
     }
 
     open() {
+        this.container.style.height = (this.options.height + 80) + 'px';
+        this.container.style.width = this.options.width + 'px';
+        this.container.style.minHeight = '300px';
         this.handleMediaChange(this.mediaQuery);
         this.iframeBox.style.display = 'block';
         this.button.innerHTML = this.getArrowIcon();
@@ -194,6 +200,8 @@ class Api2AppChatWidget {
     }
 
     close() {
+        this.container.style.height = 'auto';
+        this.container.style.width = 'auto';
         this.iframeBox.style.display = 'none';
         this.button.innerHTML = this.getChatIcon();
         this.isOpen = false;
