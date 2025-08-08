@@ -12,7 +12,8 @@ Embed code:
         'https://api2app.org/ru/apps/embed/your-app-embed-id', {
             buttonColor: '#007bff',
             hoverColor: '#0056b3',
-            position: 'bottom-right',
+            position: 'bottom-right', // bottom-right, bottom-left, top-right, top-left
+            useBackdrop: true,
             width: 350,
             height: 465
         });
