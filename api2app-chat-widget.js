@@ -107,7 +107,6 @@ class Api2AppChatWidget {
         this.iframeBox.style.backgroundColor = '#fff';
 
         this.iframe = document.createElement('iframe');
-        this.iframe.src = this.iframeSrc;
         this.iframe.style.width = '100%';
         this.iframe.style.height = '100%';
         this.iframe.style.border = 'none';
@@ -210,6 +209,9 @@ class Api2AppChatWidget {
     }
 
     open() {
+        if (!this.iframe.src) {
+            this.iframe.src = this.iframeSrc;
+        }
         this.isOpen = true;
         this.container.style.height = (this.options.height + 80) + 'px';
         this.container.style.width = this.options.width + 'px';
