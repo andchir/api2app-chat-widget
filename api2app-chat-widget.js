@@ -174,6 +174,7 @@ class Api2AppChatWidget {
     handleMediaChange(e) {
         if (e.matches) {
             this.container.style.maxHeight = 'calc(100% - 20px)';
+            this.container.style.width = this.isOpen ? '100%' : 'auto';
             this.container.style.paddingBottom = '10px';
             this.button.style.marginRight = '10px';
             this.button.style.marginLeft = '10px';
@@ -182,6 +183,7 @@ class Api2AppChatWidget {
             this.iframeBox.style.borderRight = '0';
         } else {
             this.container.style.maxHeight = 'calc(100% - 30px)';
+            this.container.style.width = this.isOpen ? this.options.width + 'px' : 'auto';
             this.container.style.paddingBottom = '0';
             this.button.style.marginRight = '0';
             this.button.style.marginLeft = '0';
