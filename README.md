@@ -19,4 +19,4 @@ Embed code:
         });
 </script>
 ```
-![Screenshot](https://github.com/andchir/api2app-chat-widget/blob/main/screenshot.jpg?raw=true)
+![Screenshot](https://github.com/andchir/api2app-chat-widget/blob/main/screenshot.png?raw=true)
